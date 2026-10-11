@@ -1,3 +1,4 @@
 Pembuatan WEB Color berkelompok
 
-cara ngodingnya 
+Anggotanya
+- saya jiro nrp 98765

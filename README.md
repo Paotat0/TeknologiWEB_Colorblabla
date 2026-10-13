@@ -6,3 +6,4 @@ Anggotanya
 - saya jiro nrp 98765
 - saya Fiqral ardhiansyah nrp 062
 sesrx
+- jiro lagi tes pake VS code

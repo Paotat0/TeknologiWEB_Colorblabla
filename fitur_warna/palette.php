@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once "../color_palette/koneksi.php";
+require_once "../color_history/color_palette/koneksi.php";
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../color_palette/login.php");
+    header("Location: ../color_history/color_palette/login.php");
     exit;
 }
 
@@ -15,7 +15,7 @@ if (isset($_POST['simpan'])) {
         preg_match('/^#[0-9a-fA-F]{6}$/', $warna)) {
 
         $stmt = mysqli_prepare(
-            $koneksi,
+            $conn,
             "INSERT INTO palette (nama, kode_warna) VALUES (?, ?)"
         );
 
@@ -29,7 +29,7 @@ if (isset($_POST['simpan'])) {
 }
 
 $query = mysqli_query(
-    $koneksi,
+    $conn,
     "SELECT * FROM palette ORDER BY id DESC"
 );
 ?>
@@ -44,7 +44,7 @@ $query = mysqli_query(
 
 
             <td>
-                <a href="edit_palette.php?id=<?= (int)$row['id'] ?>">
+                <a href="edit_pallete.php?id=<?= (int)$row['id'] ?>">
                     Edit
                 </a>
 
@@ -63,7 +63,7 @@ $query = mysqli_query(
         <?php?>
     </table>
 
-    <a href="index.php" class="back">Kembali</a>
+    <a href="indexwarna.php" class="back">Kembali</a>
 </div>
 
 <script src="../script.js"></script>

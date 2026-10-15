@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     $sql = "SELECT * FROM users WHERE email = ?";
-    $stmt = mysqli_prepare($koneksi, $sql);
+    $stmt = mysqli_prepare($conn, $sql);
 
     mysqli_stmt_bind_param($stmt, "s", $email);
     mysqli_stmt_execute($stmt);
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["nama"] = $user["nama"];
             $_SESSION["email"] = $user["email"];
 
-            header("Location: dashboard.php");
+            header("Location: dasboard.php");
             exit;
         } else {
             $pesan = "Password salah!";

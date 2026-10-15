@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../color_palette/login.php");
+    header("Location: ../color_history/color_palette/login.php");
     exit;
 }
 ?>
@@ -22,14 +22,15 @@ if (!isset($_SESSION['user_id'])) {
     <p>Kelola warna dan buat kombinasi warna sesuai kebutuhan.</p>
 
     <div class="menu">
-        <a href="users.php">User Management</a>
+        <a href="user.php">User Management</a>
         <a href="palette.php">Kelola Palette</a>
         <a href="color_picker.php">Color Picker</a>
     </div>
 
-    <a href="../color_palette/dashboard.php" class="back">
+    <a href="../color_history/color_palette/dasboard.php" class="back">
         Kembali ke Dashboard
     </a>
+    <a href="../index.php" class="back">Halaman utama</a>
 </div>
 
 <script src="../script.js"></script>

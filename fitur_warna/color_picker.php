@@ -17,9 +17,9 @@ if (!isset($_SESSION['color_picker_csrf_token'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Picker &amp; Library</title>
-    <link rel="stylesheet" href="color_picker.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="color-picker-page">
 
 <main class="container" data-csrf-token="<?= htmlspecialchars($_SESSION['color_picker_csrf_token'], ENT_QUOTES, 'UTF-8') ?>">
     <header class="page-header">

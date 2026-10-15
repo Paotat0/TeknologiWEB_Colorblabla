@@ -1,13 +1,13 @@
 <?php
 session_start();
-require_once "../color_palette/koneksi.php";
+require_once "../color_history/color_palette/koneksi.php";
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../color_palette/login.php");
+    header("Location: ../color_history/color_palette/login.php");
     exit;
 }
 
-$query = mysqli_query($koneksi, "SELECT id, nama, email FROM users");
+$query = mysqli_query($conn, "SELECT id, nama, email FROM users");
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -37,7 +37,7 @@ $query = mysqli_query($koneksi, "SELECT id, nama, email FROM users");
         <?php } ?>
     </table>
 
-    <a href="index.php" class="back">Kembali</a>
+    <a href="indexwarna.php" class="back">Kembali</a>
 </div>
 
 <script src="../script.js"></script>

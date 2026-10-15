@@ -25,6 +25,14 @@ if (!isset($_SESSION["user_id"])) {
         <?= htmlspecialchars($_SESSION["email"]) ?>
     </p>
 
+    <p>
+        <a href="../../index.php">Halaman utama aplikasi</a>
+        |
+        <a href="../../fitur_warna/color_picker.php">Color Picker &amp; History</a>
+        |
+        <a href="../../fitur_warna/indexwarna.php">Kelola fitur warna</a>
+    </p>
+
     <a href="logout.php">Logout</a>
 
 </body>

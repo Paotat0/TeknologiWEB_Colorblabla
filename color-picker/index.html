@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Features</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="dashboard">
+            <h2>Dashboard Ringkasan</h2>
+            <div class="stats">
+                <div class="stat-box">Total Palet: <span id="total-palettes">0</span></div>
+                <div class="stat-box">Palet Favorit: <span id="total-favorites">0</span></div>
+                <div class="stat-box">Aktivitas Terbaru: <span id="latest-activity">Belum ada aktivitas</span></div>
+            </div>
+        </div>
+
+        
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Cari palet berdasarkan nama atau warna (ex: #FF5733)...">
+        </div>
+
+        <!-- DAFTAR PALET (Tempat render JS) -->
+        <div id="palette-container" class="palette-grid">
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
